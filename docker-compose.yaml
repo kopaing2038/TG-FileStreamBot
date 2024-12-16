@@ -1,15 +1,9 @@
-name: TG File Stream Bot
-
+version: '3.8'  # Use a supported version
 services:
-  fsb-run:
-    image: ghcr.io/everythingsuckz/fsb
-    container_name: fsb
-    restart: always
-    volumes:
-      - ./logs:/app/logs
-      - ./fsb.env:/app/fsb.env
-    ports:
-      - "${PORT:-8038}:${PORT:-8038}"
+  fsb:
+    image: ghcr.io/everythingsuckz/fsb:latest
     env_file:
-      - path: ./fsb.env
-        required: true
+      - ./fsb.env  # Path to the environment file
+    ports:
+      - "8080:8080"  # Example port mapping; modify as needed
+    restart: unless-stopped
