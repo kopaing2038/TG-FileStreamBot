@@ -1,4 +1,4 @@
-version: "3.8"  # You can specify version 3.8 or another supported version
+name: TG File Stream Bot
 
 services:
   fsb-run:
@@ -11,5 +11,5 @@ services:
     ports:
       - "${PORT:-8038}:${PORT:-8038}"
     env_file:
-      - ./fsb.env  # Corrected format
-
+      - path: ./fsb.env
+        required: true
