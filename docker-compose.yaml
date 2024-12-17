@@ -1,5 +1,3 @@
-name: TG File Stream Bot
-
 services:
   fsb-run:
     image: ghcr.io/everythingsuckz/fsb
@@ -11,5 +9,4 @@ services:
     ports:
       - "${PORT:-8038}:${PORT:-8038}"
     env_file:
-      - path: ./fsb.env
-        required: true
+      - ./fsb.env
