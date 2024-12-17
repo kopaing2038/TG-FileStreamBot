@@ -1,4 +1,4 @@
-name: TG File Stream Bot
+version: "3.8"
 
 services:
   fsb-run:
