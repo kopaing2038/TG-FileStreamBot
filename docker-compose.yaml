@@ -1,3 +1,5 @@
+name: TG File Stream Bot
+
 services:
   fsb-run:
     image: ghcr.io/everythingsuckz/fsb
